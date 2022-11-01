@@ -1,5 +1,4 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -9,21 +8,144 @@ html,body {
 }
 
 body {
-background-image: url("../images/main-bkg.jpg");
-background-repeat: no-repeat;
-background-size: cover;
-display: grid;
+  background-image: url("../images/mainbkg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-areas: 
+  "hd hd ab ab pl1 pl1 fr fr"
+  "hd hd ab ab pl1 pl1 fr fr"
+  "pf pf ab ab pl1 pl1 fr fr"
+  "pf pf dc dc lex lex pl2 pl2"
+  "pf pf dc dc lex lex pl2 pl2"
+  "ft ft ft ft ft ft ft ft";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
+#Header {
+grid-area: hd;
+background-color: #ffecd1;
+border: 2px solid #ffecd1;
+border-radius: 15px;
+opacity: 0.85;
+padding: 10px;
+margin: 20px;
+display: flex;
+flex-direction: column;
+align-content: center;
 }
 
-p {
-  margin: 0;
+figure {
+display: flex;
+align-items: space-evenly;
+justify-content: center;
+}
+
+figure .icon {
+  width: 80px; 
+  height: 80px; 
+  overflow: hidden; 
+  border-radius: 50%;
+  z-index: 200;
+  }
+
+header h2 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+header h5 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#portfolio {
+  grid-area: pf;
+  background-color: #e70e02;
+  border: 2px solid #e70e02;
+  border-radius: 15px;
+  opacity: 0.75;
+  padding: 10px;
+  margin: 10px 20px;
+  display: flex;
+}
+
+#portfolio .portLink {
+  color: #FFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  align-self: flex-end;
+}
+
+section, #aboutMe {
+  grid-area: ab;
+  background-color: #bb3e03;
+  border: 2px solid #bb3e03;
+  border-radius: 15px;
+  opacity: 0.75;
+  padding: 10px;
+  margin: 10px 20px;
+  display: flex;
+  justify-items: space-evenly;
+}
+
+#aboutMe .aboutMe {
+  height: 40px;
+  width: 40px;
+  align-self: flex-end;
+}
+
+#aboutMe .aboutLink {
+  color: #FFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0 10px;
+  align-self: flex-end;
+}
+
+#aboutMe .aboutMetext {
+  font-family: Calibri, Helvetica, sans-serif;
+  font-size: 14px;
+  width: 50%;
+  color: white;
+  justify-self: flex-end;
+}
+
+#digital {
+  grid-area: dc;
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  border: 2px solid #833ab4;
+  border-radius: 15px;
+  opacity: 0.85;
+  padding: 10px;
+  margin: 10px 20px;
+  display: flex;
+}
+
+#digital .digitalTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: bolder;
+  padding: 0 10px;
+  align-self: center;
+  color: white;
+}
+
+#digital .digitalLink {
+  color: #FFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0 10px;
+  align-self: flex-end;
 }
