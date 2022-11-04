@@ -1,3 +1,4 @@
+/* RESETS */
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +7,20 @@
 html,body {
   height: 100%;
 }
+
+/* ANIMATIONS */
+
+/* GLOBAL CLASSES */
+
+.cube {
+  border-radius: 15px;
+  opacity: 0.85;
+  padding: 10px;
+  margin: 10px 20px;
+  display: flex;
+}
+
+/* CUSTOM CSS */
 
 body {
   background-image: url("../images/mainbkg.jpg");
@@ -23,15 +38,10 @@ body {
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-#Header {
+.header {
 grid-area: hd;
 background-color: #ffecd1;
 border: 2px solid #ffecd1;
-border-radius: 15px;
-opacity: 0.85;
-padding: 10px;
-margin: 20px;
-display: flex;
 flex-direction: column;
 align-content: center;
 }
@@ -64,18 +74,13 @@ header h5 {
   font-size: 16px;
 }
 
-#portfolio {
+.portfolio {
   grid-area: pf;
   background-color: #e70e02;
   border: 2px solid #e70e02;
-  border-radius: 15px;
-  opacity: 0.75;
-  padding: 10px;
-  margin: 10px 20px;
-  display: flex;
 }
 
-#portfolio .portLink {
+.portfolio .portLink {
   color: #FFFF;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
@@ -84,25 +89,14 @@ header h5 {
   align-self: flex-end;
 }
 
-section, #aboutMe {
+.aboutMe {
   grid-area: ab;
   background-color: #bb3e03;
   border: 2px solid #bb3e03;
-  border-radius: 15px;
-  opacity: 0.75;
-  padding: 10px;
-  margin: 10px 20px;
-  display: flex;
-  justify-items: space-evenly;
+  justify-items: space-between;
 }
 
-#aboutMe .aboutMe {
-  height: 40px;
-  width: 40px;
-  align-self: flex-end;
-}
-
-#aboutMe .aboutLink {
+.aboutMe .aboutLink {
   color: #FFFF;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
@@ -112,7 +106,7 @@ section, #aboutMe {
   align-self: flex-end;
 }
 
-#aboutMe .aboutMetext {
+.aboutMe .aboutMetext {
   font-family: Calibri, Helvetica, sans-serif;
   font-size: 14px;
   width: 50%;
@@ -120,32 +114,31 @@ section, #aboutMe {
   justify-self: flex-end;
 }
 
-#digital {
+.digital {
   grid-area: dc;
   background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
   border: 2px solid #833ab4;
-  border-radius: 15px;
-  opacity: 0.85;
-  padding: 10px;
-  margin: 10px 20px;
-  display: flex;
+  justify-items: space-evenly;
 }
 
-#digital .digitalTitle {
+.digital .digitalTitle {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
   font-weight: bolder;
   padding: 0 10px;
-  align-self: center;
+  align-self: left;
   color: white;
 }
 
-#digital .digitalLink {
+.digital .digitalLink {
   color: #FFFF;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: bold;
   text-decoration: none;
   padding: 0 10px;
+  text-align: right;
   align-self: flex-end;
 }
+
+/* MEDIA QUERY */
